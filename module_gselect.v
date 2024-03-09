@@ -53,11 +53,13 @@ module module_gselect(
     //update PHT and get taken_predict
     always @(posedge clk) begin
         if(rst)begin
+            /*cannot reset memory in one cycle
             for(i = 0; i < 256; i = i + 1)begin
                 for(j = 0; j < 256; j = j + 1)begin
                     PHT[i][j] <= 0;
                 end
             end
+            */
         end
         else begin
             if(train_valid0)begin
@@ -110,9 +112,11 @@ module module_gselect(
     //update BTB and get nextPC
     always @(posedge clk)begin
         if(rst)begin
+            /*cannot reset memory in one cycle
             for(i = 0; i < 1024; i = i + 1)begin
                 valid[i] <= 0;
             end
+            */
         end
         else begin
             if(train_valid0)begin

@@ -24,7 +24,7 @@ module module_branchprediction(
     );
     
     //µ÷ÓÃmodule_gselect
-    module_gselect modulex(.clk(clk), .rst(rst), .PC0(PC0), .PC1(PC1), .train_valid0(train_valid0), 
+    module_gshare modulex(.clk(clk), .rst(rst), .PC0(PC0), .PC1(PC1), .train_valid0(train_valid0), 
     .train_valid1(train_valid1), .isbranch0(isbranch0), .isbranch1(isbranch1), 
     .address_branch0(address_branch0), .address_branch1(address_branch1), 
     .address_result0(address_result0), .address_result1(address_result1), 
